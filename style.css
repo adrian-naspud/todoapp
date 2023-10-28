@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+  /* Primary */
+  --PrimaryBlue: hsl(220, 98%, 61%);
+  --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  /* Dark Theme */
+  --bg: hsl(235, 21%, 11%);
+  --bg50: hsla(235, 21%, 11%, 0.50);
+  --bg-container: hsl(235, 24%, 19%);
+  --LightGrayishBlue: hsl(234, 39%, 85%);
+  --LightGrayishBluehover: hsl(236, 33%, 92%);
+  --grey: hsl(234, 11%, 52%);
+  --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+
+
+}
+
+/* Light Theme */
+
+[data-theme="light"] {
+
+  --bg: hsl(233, 11%, 84%);
+  --bg: hsl(233, 11%, 84%);
+  /* --VeryLightGray: hsl(0, 0%, 98%);
+  --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+  
+  --DarkGrayishBlue: hsl(236, 9%, 61%);
+  --VeryDarkGrayishBlue: hsl(235, 19%, 35%); */
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(assets/bg-desktop-dark.jpg);
+  background-position: top;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: contain;
+  color: var(--LightGrayishBlue);
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 16px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+/* Header */
+.main-container {
+  /* max-width: 600px; */
+  min-width: 80%;
+  height: 90vh;
+  /* background-color: whitesmoke; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  margin-left: 15px;
+}
+
+.theme-icon {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.header_text {
+  background-color: var(--bg-container);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.text {
+  margin: 16px;
+  width: 100%;
+  height: 64px;
+  padding: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--bg-container);
+  color: white;
+  outline: none;
+
+}
+
+.text:hover,
+.text:active {
+  border: none;
+  outline: none;
+}
+
+/* list section */
+.list-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-container);
+  margin-top: 32px;
+  border-radius: 5px;
+}
+
+.list-container_side {
+  width: 50%;
+  height: 100%;
+  margin: 15px;
+}
+
+h2 {
+  background: var(--bg50);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.count-span {
+  float: right;
+  background: var(--VeryDarkGrayishBlue);
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.task {
+  background: var(--bg);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 1px 2px 2px var(--bg50);
+  margin-bottom: 10px;
+  width: 100% !important;
+}
+
+.task p {
+  margin: 0;
+  padding: 0 28px;
+  position: relative;
+}
+
+#complete {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px #cfcfcf dashed;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+#remove {
+  background: #fed6e0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-size: 12px;
+  color: #fe3a64;
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+
+#remove:hover {
+  background-color: #fe3a64;
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed-list #complete {
+  background: #898bf7;
+  border: 1px solid #898bf7;
+  background-image: url(assets/icon-check.svg);
+  background-size: 90%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.completed-list #complete:hover {
+  background: none;
+}
+
+.completed-list {
+  text-decoration: line-through;
+  color: #a8aaac;
+}

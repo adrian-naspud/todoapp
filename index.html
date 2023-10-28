@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css_reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>To-do App</title>
+</head>
+
+<body>
+  <div class="main">
+    <section class="main-container">
+
+
+      <div class="header-top">
+        <h1 class="title">T O D O A P P </h1>
+        <img src="assets/icon-sun.svg" class="theme-icon" id="theme-icon" alt="theme icon">
+      </div>
+
+
+      <input type="text" class="text" id="input" placeholder="Add New Task">
+
+
+
+      <section class="list-container">
+        <div class="list-container_side">
+          <h2>Active <span class="active-count count-span"></span></h2>
+
+          <ul class="active-list" id="active-list">
+
+            <!-- <li>
+              <div class="task">
+                <p>
+                  <button id="complete"></button>
+                  clean room
+                  <button id="remove">x</button>
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="task">
+                <p>
+                  <button id="complete"></button>
+                  clean room
+                  <button id="remove">x</button>
+                </p>
+              </div>
+            </li> -->
+
+          </ul>
+
+        </div>
+        <div class="list-container_side">
+          <h2>Completed <span class="completed-count count-span"></span></h2>
+
+          <ul class="completed-list" id="completed-list"> </ul>
+
+        </div>
+      </section>
+
+    </section>
+  </div>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
